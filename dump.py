@@ -107,7 +107,7 @@ def main(args: List[str]) -> None:
     file_types: Optional[List[str]] = None
 
     if len(args) > 3:
-        if not args[3].startswith('.'):
+        if not args[3].startswith('.') or args[3].startswith('.gitignore'):
             exclusion_file = args[3]
             file_types = args[4:] if len(args) > 4 else None
         else:
